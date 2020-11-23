@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Profile</title>
+		<link th:href="@{style.css}" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="cover">
+				<h2>Request new password</h2>
+                <hr>
+                <div th:if="${errorMessage != null}" th:utext="${errorMessage}" class="error">...</div>
+			</div>
+			
+            <form id="pass-form" action="editPass" method="post">
+                <input type="password" placeholder="Enter current password" name="currPass" required>
+                <input type="password" placeholder="Enter new password" name="newPass" required>
+                <input type="password" placeholder="Confirm new password" name="newPassConfirm" required>
+        
+                <a href="#" onclick="document.getElementById('pass-form').submit()"><div class = "button"><h3>Edit details</h3></div></a>
+                <a th:href="@{/profile}"><div class = "button"><h3>Cancel</h3></div></a>
+            </form>
+		</div>
+	</body>
+</html>

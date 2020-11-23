@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Home page</title>
+        <link th:href="@{style.css}" rel="stylesheet" />
+        <link th:href="@{anims.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="cover">
+                <h1 class = "tracking-in-expand">Auth System</h1>
+                <h2 class = "text-flicker-in-glow">Welcome</h2>
+                <img th:src="@{user.png}"/>
+            </div>
+            
+            <a href="signup"><div class = "button"><h3>Sign Up</h3></div></a>
+            <a href="login"><div class = "button"><h3>Login</h3></div></a>
+        </div>
+        
+    </body>
+</html>

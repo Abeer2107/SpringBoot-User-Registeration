@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Login</title>
+		<link th:href="@{style.css}" rel="stylesheet" />
+        <link th:href="@{anims.css}" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="cover">
+				<img th:src="@{user.png}"/>
+				<h1 class = "tracking-in-expand">Login</h1>
+				<hr>
+				<div th:if="${errorMessage != null}" th:utext="${errorMessage}" class="error">...</div>
+			</div>
+
+			<form id="login-form" method="post" action="login">
+		        <input type="text" placeholder="Email" name="email" required>
+       			<input type="password" placeholder="Password" name="password" required>
+
+				<a href="#" onclick="document.getElementById('login-form').submit()"><div class = "button"><h3>Login</h3></div></a>
+        		<a th:href="@{/}"><div class = "button"><h3>Back</h3></div></a>
+			</form>
+
+		</div>
+	</body>
+</html>
