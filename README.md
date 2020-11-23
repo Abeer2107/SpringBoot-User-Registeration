@@ -1,7 +1,7 @@
 # SpringBoot User Registeration Test
 <hr>
 
-## prerequisites and info:
+## Prerequisites and info:
 1) MySQL DB
 2) Netbeans
 3) DB details in "application.properties"
